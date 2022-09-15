@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-cb-modal',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cb-modal.component.scss']
 })
 export class CbModalComponent implements OnInit {
+  @Input() on = true;
 
+  @ContentChild(TemplateRef)
+  layoutTemplate!: TemplateRef<any>;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  fire() {
+    console.log('it does fire...');
+  }
 }

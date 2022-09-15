@@ -1,0 +1,6 @@
+
+  <ng-container *ngIf="isShowing">
+    {{isShowing}}
+    <ng-container *ngTemplateOutlet="layoutTemplate; context: { context: { show: this.show, close: this.close } }">
+    </ng-container>
+</ng-container>
