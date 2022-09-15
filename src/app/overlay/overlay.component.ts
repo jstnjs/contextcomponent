@@ -17,14 +17,19 @@ export class OverlayComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  templateContext = { 
+    show: this.show(), 
+    close: () => this.close()
+  };
+
   show() {
     this.isShowing = true;
   }
 
   close() {
-    console.log('wordt aangeroepen..')
-    console.log(this.isShowing);
+    this.isShowing = false;
   }
+
 
 
 }
