@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CbModalComponent } from './cb-modal.component';
+import { IconComponent } from './icon.component';
 
-describe('CbModalComponent', () => {
-  let component: CbModalComponent;
-  let fixture: ComponentFixture<CbModalComponent>;
+describe('IconComponent', () => {
+  let component: IconComponent;
+  let fixture: ComponentFixture<IconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CbModalComponent ]
+      declarations: [ IconComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CbModalComponent);
+    fixture = TestBed.createComponent(IconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

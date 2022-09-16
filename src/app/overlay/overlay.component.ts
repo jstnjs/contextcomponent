@@ -7,29 +7,9 @@ import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/co
 })
 export class OverlayComponent implements OnInit {
 
-  @Input() isShowing = true;
-
-  @ContentChild(TemplateRef)
-  layoutTemplate!: TemplateRef<any>;
-  
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  templateContext = { 
-    show: this.show(), 
-    close: () => this.close()
-  };
-
-  show() {
-    this.isShowing = true;
-  }
-
-  close() {
-    this.isShowing = false;
-  }
-
-
 
 }
