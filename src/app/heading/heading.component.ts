@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-heading',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heading.component.scss']
 })
 export class HeadingComponent implements OnInit {
+
+  @Input() level: number = 2;
 
   constructor() { }
 

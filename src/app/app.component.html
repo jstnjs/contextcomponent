@@ -1,29 +1,24 @@
 <app-context-component>
   <ng-template let-isShowing="isShowing" let-context="context">
     <app-heading>Showing context component possibilities...</app-heading>
-    <p class="my-3">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur autem id
-      libero nesciunt, saepe vel iusto sunt repellendus necessitatibus dolorum
-      explicabo. Architecto ipsam odio tempora eveniet magnam provident neque
-      id! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
-      tempora recusandae quia nemo, in architecto dignissimos delectus nam
-      eligendi, assumenda porro iusto deserunt. Dolores reiciendis laborum ut
-      laboriosam quisquam officia.
-    </p>
+    <app-typography tag="p"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quam nihil
+      eveniet, distinctio debitis tempore ducimus necessitatibus, iure deleniti
+      maiores perspiciatis possimus voluptates? Vel fugiat nisi iure repellendus
+      impedit libero.</app-typography
+    >
     <app-button (click)="context.show()">Open modal</app-button>
 
     <app-overlay *ngIf="isShowing">
       <app-card>
         <app-icon></app-icon>
         <app-heading>Modal title..</app-heading>
-        <div class="mt-3 text-center sm:mt-5">
-          <div class="mt-2">
-            <p class="text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur amet labore.
-            </p>
-          </div>
-        </div>
+        <app-typography tag="p"
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quam
+          nihil eveniet, distinctio debitis tempore ducimus necessitatibus, iure
+          deleniti maiores perspiciatis possimus voluptates? Vel fugiat nisi
+          iure repellendus impedit libero.</app-typography
+        >
         <app-button (click)="context.close()"> Close modal</app-button>
       </app-card>
     </app-overlay>
